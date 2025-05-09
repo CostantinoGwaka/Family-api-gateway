@@ -23,7 +23,7 @@ spring:
             - Path=/api/bills/**
             - Path=/api/budget/**
             - Path=/api/category/**
-
+            - Path=/api/statisticsTotal/**
 eureka:
   client:
     register-with-eureka: true
