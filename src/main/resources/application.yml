@@ -8,22 +8,22 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: false
+          enabled: true
           lower-case-service-id: true
-#      routes:
-#
-#        - id: family-finance
-#          uri: lb://family-finance
-#          predicates:
-#            - Path=/api/bills/**
-#            - Path=/api/budget/**
-#            - Path=/api/category/**
-#            - Path=/api/statisticsTotal/**
-#
-#        - id: family-auth
-#          uri: lb://family-auth
-#          predicates:
-#            - Path=/api/auth/**
+      routes:
+        - id: family-finance
+          uri: lb://family-finance
+          predicates:
+            - Path=/api/bills/**
+            - Path=/api/budget/**
+            - Path=/api/category/**
+            - Path=/api/statisticsTotal/**
+
+        - id: family-auth
+          uri: lb://family-auth
+          predicates:
+            - Path=/api/auth/**
+
 eureka:
   client:
     register-with-eureka: true
